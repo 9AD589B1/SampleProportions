@@ -12,3 +12,11 @@ se <- sqrt ((phat * nonphat) / s)
 CI <- c(phat - se, phat + se)
 CI
 
+#If, for a new confidence interval based on a new sample, we want to reduce 
+#the margin of error to 1% while keeping the confidence level the same. 
+#At least how many respondents should we sample?
+
+#We would solve for n: 0.01 = 1.96 * sqrt ( ( 0.85 * 0.15 ) / n )
+
+n <- ceiling((z ^ 2 * phat * nonphat) / 0.01 ^ 2) #round up
+n
