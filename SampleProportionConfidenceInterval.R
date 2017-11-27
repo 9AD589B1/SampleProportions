@@ -10,4 +10,5 @@ nonphat <- 1 - phat
 z <- 1.96 #Z-Score for the the 95% confidence intervale
 se <- sqrt ((phat * nonphat) / s)
 CI <- c(phat - se, phat + se)
+CI
 
