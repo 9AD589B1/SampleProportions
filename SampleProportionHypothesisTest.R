@@ -14,3 +14,6 @@ se <- sqrt((p * nonp) / n) #calculate the standard error
 z <- (phat - p) / se #calculate the Z-score
 prob <- pnorm(z, lower.tail = FALSE) #calculate the area under the curve
 prob
+
+#We can interpret this as a almost a 0% chance of obtaining a random sample of 
+#1,983 Americans where 60% or more believe in evolution, if in fact 50% of Americans believe in evolution
