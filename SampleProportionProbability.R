@@ -4,12 +4,12 @@
 
 rm ( list = ls ( all = TRUE ) ) #clear variables
 
-s <- 200 #sample size
+n <- 200 #sample size
 phat <- 0.95 #probability of our sample containing 95% angiosperms
 p <- 0.9 #population proportion of angiosperms
 nonp <- 1 - p #population proportion of non-angiosperms
 x <- 0.9 #population mean
-se <- sqrt ((p * nonp) / s) #Calculate the Standard Error
+se <- sqrt ((p * nonp) / n) #Calculate the Standard Error
 z <- ( phat - p ) / se #Calculate Z-Score
 prob <- pnorm(z, lower.tail = FALSE) #calculate aread under the curve to obtain the probability
 prob

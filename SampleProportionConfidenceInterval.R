@@ -4,11 +4,11 @@
 
 rm ( list = ls ( all = TRUE ) ) #clear variables
 
-s <- 670 #sample size
+n <- 670 #sample size
 phat <- 571 / 670 #calculate the sample proportion
 nonphat <- 1 - phat
 z <- 1.96 #Z-Score for the the 95% confidence intervale
-se <- sqrt ((phat * nonphat) / s)
+se <- sqrt ((phat * nonphat) / n)
 CI <- c(phat - se, phat + se)
 CI
 
