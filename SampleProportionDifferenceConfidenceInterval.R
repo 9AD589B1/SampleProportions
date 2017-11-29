@@ -25,5 +25,5 @@ z <- 1.96 #Z-score for 95% Confidence Level
 se <- sqrt ( ( (phat1 * nonphat1) / n1) + (phat2 * nonphat2) / n2 ) #calculate standard error
 
 #Confidence interval (95% Confidence Level) formula: ( Phat Coursera - Phat US ) +/- z * SE
-CI <- c( phatdiff - ( z * se ), phatdiff + ( z * se ) )
+CI <- c( phatdiff - ( z * se ), phatdiff + ( z * se ) ) #Calculate confidence interval
 CI
