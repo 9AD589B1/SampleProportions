@@ -34,3 +34,5 @@ se <- sqrt((p * nonp) / n) #calculate the standard error
 z <- (phat - p) / se #calculate the Z-score
 prob <- pnorm(z) #calculate the area under the curve
 prob
+
+#Our probability is less than 1%, so we can reject the null hypothesis
