@@ -41,8 +41,8 @@ prob
 #means to know something very well. MythBusters (a popular TV show) put to test the validity of this saying.
 #They recruited 12 volunteers, each of whom were shown 10 pictures of backs of
 #hands (while wearing gloves so they couldn't see their own hands), and asked them
-#to identify their own hand among the 10 pictures. 11 out of 12 people completed
-#the task successfully.
+#to identify their own hand among the 10 pictures. 11 out of 12 people completed the task successfully.
+
 #What are the hypotheses for evaluating whether these data provide convincing
 #evidence of the validity of the saying, i.e. that people do better than random guessing
 #when it comes to recognizing the back of their own hand?
@@ -56,12 +56,14 @@ trials <- 1000000 #number of trials to perform
 GuessTrials <-
   as.data.frame (matrix (sample (c(1:10), n * trials, rep = T), trials, n)) #Create a dataframe of the trials
 
-GuessTrialSuccess <- data.frame ( TrialSuccess = apply ( GuessTrials, 1, function(x)sum(x == 1) / 12 ) ) #Create a dataframe of trial successes
+GuessTrialSuccess <-
+  data.frame (TrialSuccess = apply (GuessTrials, 1, function(x)
+    sum(x == 1) / 12)) #Create a dataframe of trial successes
 
 GuessTotalSuccess <- GuessTrialSuccess %>%
   summarise (
-    TotalSuccessCount   = sum(TrialSuccess >= 11/12),
-    TotalSuccessPercent = sum(TrialSuccess >= 11/12) / trials
+    TotalSuccessCount   = sum(TrialSuccess >= 11 / 12),
+    TotalSuccessPercent = sum(TrialSuccess >= 11 / 12) / trials
   )
 
 #hist(GuessTrialMeans$TrialMean)
